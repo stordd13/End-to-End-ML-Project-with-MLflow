@@ -37,7 +37,6 @@ Documentation
 cmd
 mlflow ui
 dagshub
-dagshub
 
 MLFLOW_TRACKING_URI=https://dagshub.com/stordeur.bru/End-to-End-ML-Project-with-MLflow.mlflow 
 MLFLOW_TRACKING_USERNAME=stordeur.bru 
@@ -51,7 +50,7 @@ export MLFLOW_TRACKING_URI=https://dagshub.com/stordeur.bru/End-to-End-ML-Projec
 
 export MLFLOW_TRACKING_USERNAME=stordeur.bru 
 
-export MLFLOW_TRACKING_PASSWORD=fcd028c788a5f8d79dce5bfe08d8d2145df543df
+export MLFLOW_TRACKING_PASSWORD=fcd028c788a5f8d79dce5bfe08d8d2145df543df 
 
 
 # AWS-CICD-Deployment-with-Github-Actions
@@ -82,7 +81,7 @@ export MLFLOW_TRACKING_PASSWORD=fcd028c788a5f8d79dce5bfe08d8d2145df543df
 
 2. AmazonEC2FullAccess
 3. Create ECR repo to store/save docker image
-- Save the URI: 566373416292.dkr.ecr.ap-south-1.amazonaws.com/mlproj
+- Save the URI: 648772456581.dkr.ecr.eu-west-3.amazonaws.com/
 4. Create EC2 machine (Ubuntu)
 5. Open EC2 and Install docker in EC2 Machine:
 #optinal
@@ -100,6 +99,7 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 
 newgrp docker
+
 6. Configure EC2 as self-hosted runner:
 setting>actions>runner>new self hosted runner> choose os> then run command one by one
 7. Setup github secrets:
@@ -107,11 +107,11 @@ AWS_ACCESS_KEY_ID=
 
 AWS_SECRET_ACCESS_KEY=
 
-AWS_REGION = us-east-1
+AWS_REGION = eu-west-3
 
-AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+AWS_ECR_LOGIN_URI = 648772456581.dkr.ecr.eu-west-3.amazonaws.com/
 
-ECR_REPOSITORY_NAME = simple-app
+ECR_REPOSITORY_NAME = mlproj
 
 # About MLflow
 MLflow
